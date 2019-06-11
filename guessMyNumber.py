@@ -4,7 +4,7 @@ import random
 print('Hello, what is your name?')
 name = input()
 
-print('Oh, hi' + name 'I am thinking of a number between 1 and 20')
+print('Oh, hi' + name + ', I am thinking of a number between 1 and 20')
 secret_num = random.randint(1, 20)
 
 for guesses_taken in range(1, 7):
@@ -19,7 +19,8 @@ for guesses_taken in range(1, 7):
         break
 
 if player_guess == secret_num:
-    print("Nice!" + name + "You guessed my number in " + guesses_taken "guesses.")
+    print('Nice!' + name + 'You guessed my number in ' + guesses_taken + 'guesses.')
 else:
-    print("Nope. You exceeded the numbner of guesses taken.")
+    print("Nope. You exceeded the number of guesses taken. I was thinking of " + str(secret_num))
 print("You took" + guesses_taken + "guesses.")
+
